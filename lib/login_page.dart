@@ -2,6 +2,7 @@
 
 import 'package:fitpot_app_flutter/verification_code_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,27 +18,27 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 86,),
               Icon(Icons.arrow_back_ios_rounded),
               _buildLoginImage(),
-              const SizedBox(
-                height: 67,
+               SizedBox(
+                height: 67.h,
               ),
               _buildWelcomeText(),
               const SizedBox(
                 height: 10,
               ),
               _buildEnterYourNumberTextLine(),
-              SizedBox(height: 30,),
+              SizedBox(height: 30.h,),
               _buildHintInputText(),
-              const SizedBox(
-                height: 15,
+               SizedBox(
+                height: 15.h,
               ),
               _buildSendOtpTextLine(),
-              const SizedBox(
-                height: 67,
+               SizedBox(
+                height: 67.h,
               ),
 
               _buildProcessButton(context),
-              const SizedBox(
-                height: 27,
+               SizedBox(
+                height: 27.h,
               ),
               _buildDoNotHaveAnAccountTextLine(),
 
@@ -67,7 +68,7 @@ class LoginPage extends StatelessWidget {
     );
   }
   Widget _buildEnterYourNumberTextLine(){
-    return Text(
+    return const Text(
       "Please Enter your mobile number to continue",
       style: TextStyle(
         color: Colors.black54,
@@ -130,7 +131,7 @@ class LoginPage extends StatelessWidget {
     return  Center(
         child: Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Don’t have an account?",
               style: TextStyle(
                   fontWeight: FontWeight.w500,
