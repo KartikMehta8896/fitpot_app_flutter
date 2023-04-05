@@ -1,5 +1,6 @@
 import 'package:fitpot_app_flutter/result_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CalculateYourBMIScreen extends StatelessWidget {
   const CalculateYourBMIScreen({Key? key}) : super(key: key);
@@ -64,7 +65,7 @@ class CalculateYourBMIScreen extends StatelessWidget {
   }
 
   Widget _buildCalculateYourBMIText() {
-    return Text(
+    return const Text(
       "Calculate your BMI",
       textAlign: TextAlign.start,
       style: TextStyle(fontWeight: FontWeight.w700, fontSize: 31),
@@ -104,7 +105,7 @@ class CalculateYourBMIScreen extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            width: 90,
+            width: 90.w,
             child: TextFormField(
               decoration: InputDecoration(
                   hintText: 'Male/female',
@@ -117,7 +118,7 @@ class CalculateYourBMIScreen extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            width: 90,
+            width: 90.w,
             child: Padding(
               padding: const EdgeInsets.only(right: 45),
               child: TextFormField(
@@ -165,7 +166,7 @@ class CalculateYourBMIScreen extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            width: 90,
+            width: 90.w,
             child: TextFormField(
               decoration: InputDecoration(
                   hintText: '170 cm',
@@ -178,7 +179,7 @@ class CalculateYourBMIScreen extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            width: 90,
+            width: 90.w,
             child: Padding(
               padding: const EdgeInsets.only(right: 25),
               child: TextFormField(
@@ -195,10 +196,10 @@ class CalculateYourBMIScreen extends StatelessWidget {
 
   Widget _buildImage() {
     return Center(
-      child: const Image(
+      child:  Image(
         image: AssetImage("assets/images/bmi_screen_image.png"),
-        height: 203,
-        width: 221,
+        height: 203.h,
+        width: 221.w,
       ),
     );
   }
@@ -212,9 +213,9 @@ class CalculateYourBMIScreen extends StatelessWidget {
             builder: (context) =>  ResultScreen(),));
       },
       child: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30),
+        padding: EdgeInsets.only(left: 30.w, right: 30.w),
         child: Container(
-          height: 45,
+          height: 45.h,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: Colors.red[200]),

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fitpot_app_flutter/calculate_your_bmi_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BodyMeasurementPage extends StatefulWidget {
   const BodyMeasurementPage({Key? key}) : super(key: key);
@@ -100,8 +101,8 @@ class _BodyMeasurementPageState extends State<BodyMeasurementPage> {
             }
           },
           child: Container(
-            height: 22,
-            width: 35.98,
+            height: 22.h,
+            width: 35.98.w,
             decoration: BoxDecoration(
                 border: Border.symmetric(),
                 borderRadius: BorderRadius.circular(20),
@@ -128,8 +129,8 @@ class _BodyMeasurementPageState extends State<BodyMeasurementPage> {
             }
           },
           child: Container(
-            height: 22,
-            width: 35.98,
+            height: 22.h,
+            width: 35.98.w,
             decoration: BoxDecoration(
                 border: const Border.symmetric(),
                 borderRadius: BorderRadius.circular(20),
@@ -155,9 +156,9 @@ class _BodyMeasurementPageState extends State<BodyMeasurementPage> {
            builder: (context) =>  CalculateYourBMIScreen(),));
      },
      child: Padding(
-       padding: const EdgeInsets.only(left: 30, right: 30),
+       padding: EdgeInsets.only(left: 30.w, right: 30.w),
        child: Container(
-         height: 45,
+         height: 45.h,
          width: double.infinity,
          decoration: BoxDecoration(
              borderRadius: BorderRadius.circular(20),

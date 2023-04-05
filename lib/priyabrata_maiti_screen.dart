@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class PriyabrataMaitiScreen extends StatefulWidget {
@@ -40,7 +41,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
             // SizedBox(
             //   height: 26,
             // ),
-            _BuildTodayTarget(),
+            _buildTodayTarget(),
             const SizedBox(
               height: 40,
             ),
@@ -62,11 +63,11 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
 
   Widget _buildToMenuRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 24, right: 53),
+      padding: EdgeInsets.only(left: 24.w, right: 53.w),
       child: Row(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 19),
+           Padding(
+            padding: EdgeInsets.only(right: 19.w),
             child: Icon(Icons.menu),
           ),
           const Expanded(
@@ -76,7 +77,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 23),
+            padding: EdgeInsets.only(right: 23.w),
             child: Icon(
               Icons.wallet,
               color: Colors.red.shade200,
@@ -95,11 +96,11 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
   }
 
   Widget _buildHeightWeightBodyMassIndex() {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 54, right: 61),
-          child: Row(
+    return Padding(
+      padding: EdgeInsets.only(left: 54.w, right: 61.w),
+      child: Column(
+        children: [
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -125,13 +126,10 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
               )
             ],
           ),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 54, right: 61),
-          child: Row(
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
               Text(
@@ -156,20 +154,20 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                 ),
               )
             ],
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 
   Widget _buildRectangularColorRow() {
     return Padding(
-      padding: const EdgeInsets.only(right: 36, left: 36),
+      padding:EdgeInsets.only(right: 36.w, left: 36.w),
       child: Row(
         children: [
           Expanded(
             child: Container(
-              height: 16,
+              height: 16.h,
               decoration: const BoxDecoration(
                   color: Colors.lightBlueAccent,
                   borderRadius: BorderRadius.only(
@@ -189,7 +187,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
           ),
           Expanded(
             child: Container(
-              height: 16,
+              height: 16.h,
               decoration: BoxDecoration(
                   color: Colors.green, borderRadius: BorderRadius.circular(1)),
               child: const Text("18.5 -24.99",
@@ -203,7 +201,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
           ),
           Expanded(
             child: Container(
-              height: 16,
+              height: 16.h,
               decoration: BoxDecoration(
                   color: Colors.yellow, borderRadius: BorderRadius.circular(1)),
               child: const Text("25 -29.99",
@@ -217,7 +215,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
           ),
           Expanded(
             child: Container(
-              height: 16,
+              height: 16.h,
               decoration: const BoxDecoration(
                   color: Colors.redAccent,
                   borderRadius: BorderRadius.only(
@@ -274,12 +272,12 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
     );
   }
 
-  Widget _BuildTodayTarget() {
+  Widget _buildTodayTarget() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 43),
+         Padding(
+          padding: EdgeInsets.only(left: 43.h),
           child: Text(
             "Today’s Target",
             style: TextStyle(
@@ -292,20 +290,20 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
           height: 14,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 43, right: 46),
+          padding: EdgeInsets.only(left: 43.w, right: 46.w),
           child: Row(
             children: [
               Container(
-                height: 70,
-                width: 140,
+                height: 70.h,
+                width: 140.w,
                 decoration: BoxDecoration(
                     color: Colors.red.shade200,
                     borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   children: [
-                    const Expanded(
+                    Expanded(
                         child: Padding(
-                      padding: EdgeInsets.only(left: 5),
+                      padding: EdgeInsets.only(left: 5.w),
                       child: Icon(
                         Icons.directions_run,
                         color: Colors.white,
@@ -313,7 +311,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                     )),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 30),
+                        padding:EdgeInsets.only(right: 30.w),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
@@ -342,16 +340,16 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                 width: 27,
               ),
               Container(
-                height: 70,
-                width: 140,
+                height: 70.h,
+                width: 140.w,
                 decoration: BoxDecoration(
                     color: Colors.red.shade200,
                     borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   children: [
-                    const Expanded(
+                     Expanded(
                         child: Padding(
-                      padding: EdgeInsets.only(left: 5),
+                      padding: EdgeInsets.only(left: 5.w),
                       child: Icon(
                         Icons.directions_run,
                         color: Colors.white,
@@ -359,7 +357,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                     )),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 18),
+                        padding: EdgeInsets.only(right: 18.w),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
@@ -393,7 +391,7 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
 
   Widget _buildUpcomingCompetionsViewAllRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 43, right: 38),
+      padding: EdgeInsets.only(left: 43.w, right: 38.w),
       child: Row(
         children: [
           const Expanded(
@@ -416,23 +414,23 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
 
   Widget _buildUpcomingCompetionsFirstWeeklyContainer() {
     return Padding(
-      padding: const EdgeInsets.only(left: 35, right: 23),
+      padding: EdgeInsets.only(left: 35.w, right: 23.w),
       child: Container(
-        height: 137,
+        height: 137.h,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Colors.pink[50]),
         child: Row(
           children: [
             Padding(
-              padding:  EdgeInsets.only(left: 21),
+              padding:  EdgeInsets.only(left: 21.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                  SizedBox(height: 13,),
                   Container(
-                    height: 17,
-                    width: 51,
+                    height: 17.h,
+                    width: 51.w,
                     decoration:BoxDecoration(
                         borderRadius: BorderRadius.circular(20),color: Colors.pink[100]),
                     child: Center(
@@ -461,8 +459,8 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                     height: 21,
                   ),
                   Container(
-                      height: 22,
-                      width: 80,
+                      height: 22.h,
+                      width: 80.w,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
@@ -491,23 +489,23 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
 
   Widget _buildUpcomingCompetionsSecondWeeklyContainer() {
     return Padding(
-      padding: const EdgeInsets.only(left: 35, right: 23),
+      padding: EdgeInsets.only(left: 35.w, right: 23.w),
       child: Container(
-        height: 137,
+        height: 137.h,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Colors.pink[50]),
         child: Row(
           children: [
             Padding(
-              padding:  EdgeInsets.only(left: 21),
+              padding:  EdgeInsets.only(left: 21.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 13,),
                   Container(
-                    height: 17,
-                    width: 51,
+                    height: 17.h,
+                    width: 51.w,
                     decoration:BoxDecoration(
                         borderRadius: BorderRadius.circular(20),color: Colors.pink[100]),
                     child: Center(
@@ -536,8 +534,8 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                     height: 21,
                   ),
                   Container(
-                      height: 22,
-                      width: 80,
+                      height: 22.h,
+                      width: 80.w,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
@@ -566,23 +564,23 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
 
   Widget _buildUpcomingCompetionsThireddWeeklyContainer() {
     return Padding(
-      padding: const EdgeInsets.only(left: 35, right: 23),
+      padding:  EdgeInsets.only(left: 35.w, right: 23.w),
       child: Container(
-        height: 137,
+        height: 137.h,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Colors.pink[50]),
         child: Row(
           children: [
             Padding(
-              padding:  EdgeInsets.only(left: 21),
+              padding: EdgeInsets.only(left: 21.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 13,),
                   Container(
-                    height: 17,
-                    width: 51,
+                    height: 17.h,
+                    width: 51.w,
                     decoration:BoxDecoration(
                         borderRadius: BorderRadius.circular(20),color: Colors.pink[100]),
                     child: Center(
@@ -611,8 +609,8 @@ class _PriyabrataMaitiScreenState extends State<PriyabrataMaitiScreen> {
                     height: 21,
                   ),
                   Container(
-                      height: 22,
-                      width: 80,
+                      height: 22.h,
+                      width: 80.w,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),

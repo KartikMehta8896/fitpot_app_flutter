@@ -1,5 +1,6 @@
 import 'package:fitpot_app_flutter/common_widgets/workout_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CompetitionPage extends StatelessWidget {
   const CompetitionPage({Key? key}) : super(key: key);
@@ -53,13 +54,13 @@ class CompetitionPage extends StatelessWidget {
 
   Widget _buildTopAppBarContainer() {
     return Container(
-      height: 129,
+      height: 129.h,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(1), color: Colors.red.shade200),
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 56),
+            padding: EdgeInsets.only(top: 56.h),
             child: const Text(
               "Competitions ",
               style: TextStyle(
@@ -72,7 +73,7 @@ class CompetitionPage extends StatelessWidget {
             height: 24,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 44, right: 23),
+            padding: EdgeInsets.only(left: 44.w, right: 23.w),
             child: Row(
               children: const [
                 Icon(
@@ -118,12 +119,12 @@ class CompetitionPage extends StatelessWidget {
 
   Widget _buildCategoryRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 48, right: 33),
+      padding: EdgeInsets.only(left: 48.w, right: 33.w),
       child: Row(
         children: [
           Container(
-            height: 27,
-            width: 104,
+            height: 27.h,
+            width: 104.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.red.shade200),
@@ -139,8 +140,8 @@ class CompetitionPage extends StatelessWidget {
             ),
           ),
           Container(
-            height: 27,
-            width: 104,
+            height: 27.h,
+            width: 104.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: Colors.white),
             child: Center(
@@ -155,11 +156,11 @@ class CompetitionPage extends StatelessWidget {
             ),
           ),
           Container(
-            height: 27,
-            width: 104,
+            height: 27.h,
+            width: 104.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20), color: Colors.white),
-            child: Center(
+            child: const Center(
               child: Text(
                 "Category",
                 textAlign: TextAlign.center,

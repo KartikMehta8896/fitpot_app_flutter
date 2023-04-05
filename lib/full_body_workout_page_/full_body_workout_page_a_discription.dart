@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FullBodyWorkoutPageADescription extends StatelessWidget {
   const FullBodyWorkoutPageADescription({Key? key}) : super(key: key);
@@ -42,7 +43,7 @@ class FullBodyWorkoutPageADescription extends StatelessWidget {
             right: 26,
             child: Container(
               // margin: EdgeInsets.only(left: 20, right: 20),
-              height: 140,
+              height: 140.h,
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -82,13 +83,13 @@ class FullBodyWorkoutPageADescription extends StatelessWidget {
 
   Widget _buildStartAndEndDateContainer() {
     return Container(
-      margin: EdgeInsets.only(left: 26, right: 27),
-      height: 92,
+      margin: EdgeInsets.only(left: 26.w, right: 27.w),
+      height: 92.h,
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20), color: Colors.white),
       child: Padding(
-        padding: const EdgeInsets.only(left: 27, right: 26),
+        padding:EdgeInsets.only(left: 27.w, right: 26.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -130,13 +131,13 @@ class FullBodyWorkoutPageADescription extends StatelessWidget {
 
   Widget _buildADescriptionsContainer() {
     return Container(
-      height: 211,
+      height: 211.h,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 26, right: 27),
+      margin: EdgeInsets.only(left: 26.w, right: 27.w),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(15)),
       child: Padding(
-        padding: const EdgeInsets.only(left: 29, right: 42),
+        padding:EdgeInsets.only(left: 29.w, right: 42.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -214,13 +215,13 @@ class FullBodyWorkoutPageADescription extends StatelessWidget {
 
   Widget _buildBDescriptionsContainer() {
     return Container(
-      height: 320,
+      height: 320.h,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 26, right: 27),
+      margin: EdgeInsets.only(left: 26.w, right: 27.w),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15), color: Colors.white),
       child: Padding(
-        padding: const EdgeInsets.only(left: 29, right: 42),
+        padding:EdgeInsets.only(left: 29.w, right: 42.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

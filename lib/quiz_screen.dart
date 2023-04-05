@@ -1,5 +1,6 @@
 import "package:fitpot_app_flutter/profile_screen.dart";
 import "package:flutter/material.dart";
+import "package:flutter_screenutil/flutter_screenutil.dart";
 import "package:flutter_svg/svg.dart";
 
 class QuizScreen extends StatelessWidget {
@@ -11,15 +12,15 @@ class QuizScreen extends StatelessWidget {
       body: Column(
         children: [
           _buildAvatarTextCircle(),
-          SizedBox(height: 60,),
+          const SizedBox(height: 60,),
           _buildCardioRowText(),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           _buildYogaRowText(),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           _buildStrengthExercisesRowText(),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           _buildBalanceExercisesRowText(),
-          SizedBox(height: 74),
+          const SizedBox(height: 74),
           _buildNextButton(context),
         ],
       ),
@@ -28,7 +29,7 @@ class QuizScreen extends StatelessWidget {
 
   Widget _buildAvatarTextCircle() {
     return Container(
-      height: 250,
+      height: 250.h,
       width: double.infinity,
       child: Stack(children: [
         Positioned(
@@ -37,11 +38,11 @@ class QuizScreen extends StatelessWidget {
           child: SvgPicture.asset(
             "assets/images/background_quiz_image.svg",
             fit: BoxFit.fill,
-            height: 250,
+            height: 250.h,
             width: double.infinity,
           ),
         ),
-        Positioned(
+        const Positioned(
             left: 20,
             top: 20,
             child: Icon(
@@ -77,16 +78,16 @@ class QuizScreen extends StatelessWidget {
 
   Widget _buildCardioRowText() {
     return Container(
-      margin: EdgeInsets.only(left: 22, right: 21),
+      margin: EdgeInsets.only(left: 22.w, right: 21.w),
       width: double.infinity,
-      height: 52,
+      height: 52.h,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.red.shade200),
         borderRadius: BorderRadius.circular(25),
       ),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 15),
-        child: Text(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25.w,vertical: 15.h),
+        child: const Text(
           "Cardio",
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18,color: Colors.black54),
         ),
@@ -96,7 +97,7 @@ class QuizScreen extends StatelessWidget {
 
   Widget _buildYogaRowText() {
     return Container(
-      margin: EdgeInsets.only(left: 22, right: 21),
+      margin: EdgeInsets.only(left: 22.w, right: 21.w),
       width: double.infinity,
       height: 52,
       decoration: BoxDecoration(
@@ -104,8 +105,8 @@ class QuizScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 15),
-        child: Text(
+        padding: EdgeInsets.symmetric(horizontal: 25.w,vertical: 15.h),
+        child: const Text(
           "Yoga",
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18,color: Colors.black54),
         ),
@@ -115,16 +116,16 @@ class QuizScreen extends StatelessWidget {
 
   Widget _buildStrengthExercisesRowText() {
     return Container(
-      margin: EdgeInsets.only(left: 22, right: 21),
+      margin: EdgeInsets.only(left: 22.w, right: 21.w),
       width: double.infinity,
-      height: 52,
+      height: 52.h,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.red.shade200),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 15),
-        child: Text(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25.w,vertical: 15.h),
+        child: const Text(
           "StrengthExercises",
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18,color: Colors.black54),
         ),
@@ -134,16 +135,16 @@ class QuizScreen extends StatelessWidget {
 
   Widget _buildBalanceExercisesRowText() {
     return Container(
-      margin: EdgeInsets.only(left: 22, right: 21),
+      margin: EdgeInsets.only(left: 22.w, right: 21.w),
       width: double.infinity,
-      height: 52,
+      height: 52.h,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.red.shade200),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 15),
-        child: Text(
+      child:  Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25.w,vertical: 15.h),
+        child: const Text(
           "StrengthExercises",
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18,color: Colors.black54),
         ),
@@ -160,7 +161,7 @@ class QuizScreen extends StatelessWidget {
               builder: (context) => const ProfileScreen (),));
       },
       child: Container(margin: EdgeInsets.only(left: 20,right: 20),
-        height: 45,
+        height: 45.h,
         // width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20), color: Colors.red[200]),

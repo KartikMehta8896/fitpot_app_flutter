@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ReviewPage extends StatelessWidget {
   const ReviewPage({Key? key}) : super(key: key);
@@ -8,22 +9,22 @@ class ReviewPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(left: 30, right: 30),
+          margin: EdgeInsets.only(left: 30.w, right: 30.w),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 108,
               ),
               _buildImage(),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               _buildTextRow(),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               _buildEnterYourReview(),
-              SizedBox(height: 49,),
+              const SizedBox(height: 49,),
               _buildNextButton()
             ],
           ),
@@ -35,32 +36,32 @@ class ReviewPage extends StatelessWidget {
   Widget _buildImage() {
     return Center(
       child: Image(
-        image: AssetImage("assets/images/review_page_image.png"),
-        height: 145,
-        width: 217,
+        image: const AssetImage("assets/images/review_page_image.png"),
+        height: 145.h,
+        width: 217.w,
       ),
     );
   }
 
   Widget _buildTextRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 10),
+      padding:  EdgeInsets.only(left: 10.w),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "How you feel about Fitness",
             style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Text(
+          const Text(
             "Please Rate our app",
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Center(
@@ -71,7 +72,7 @@ class ReviewPage extends StatelessWidget {
                 fontSize: 22,
                 color: Colors.red.shade200),
           )),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           Row(
@@ -80,39 +81,39 @@ class ReviewPage extends StatelessWidget {
               Icon(
                 Icons.star,
                 color: Colors.yellow[700],
-                size: 31,
+                size: 31.sm,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Icon(
                 Icons.star,
                 color: Colors.yellow[700],
-                size: 31,
+                size: 31.sm,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Icon(
                 Icons.star,
                 color: Colors.yellow[700],
-                size: 31,
+                size: 31.sm,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Icon(
                 Icons.star,
                 color: Colors.yellow[700],
-                size: 31,
+                size: 31.sm,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               Icon(
                 Icons.star_border_purple500_outlined,
                 color: Colors.yellow[700],
-                size: 31,
+                size: 31.sm,
               )
             ],
           )
@@ -135,10 +136,10 @@ class ReviewPage extends StatelessWidget {
         // Navigator.push(
         //     context,
         //     MaterialPageRoute(
-        //       builder: (context) => const VerificationCodeScreen(),));
+        //       builder: (context) => (),));
       },
       child: Container(
-        height: 45,
+        height: 45.h,
         width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20), color: Colors.red[200]),

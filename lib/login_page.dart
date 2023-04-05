@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
     );
   }
   Widget _buildWelcomeText(){
-    return Text(
+    return const Text(
       "Welcome user",
       style: TextStyle(fontSize: 31, fontWeight: FontWeight.bold),
     );
@@ -78,7 +78,7 @@ class LoginPage extends StatelessWidget {
   }
   Widget _buildHintInputText(){
     return Padding(
-      padding: const EdgeInsets.only(right: 29),
+      padding:  EdgeInsets.only(right: 29.w),
       child: Column(
         children: [
           TextFormField(
@@ -109,9 +109,9 @@ class LoginPage extends StatelessWidget {
               builder: (context) => const VerificationCodeScreen(),));
       },
       child: Padding(
-        padding:  EdgeInsets.only(left: 66, right: 67),
+        padding:  EdgeInsets.only(left: 66.w, right: 67.w),
         child: Container(
-          height: 40,
+          height: 40.h,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),

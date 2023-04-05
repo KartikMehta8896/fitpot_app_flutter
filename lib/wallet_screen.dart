@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class WalletScreen extends StatelessWidget {
   const WalletScreen({Key? key}) : super(key: key);
@@ -7,24 +8,24 @@ class WalletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(left: 30, right: 30),
+        margin: EdgeInsets.only(left: 30.w, right: 30.w),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 45,
             ),
             _buildAppBarRow(),
-            SizedBox(
+            const SizedBox(
               height: 29,
             ),
             _buildAddMoneyColumn(),
-            SizedBox(height: 37),
+            const SizedBox(height: 37),
             _buildWinningsContainers(),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             _buildBonusPointContainers(),
-            SizedBox(
+            const SizedBox(
               height: 54
             ),
             _buildPaymentManagement(),
@@ -36,10 +37,10 @@ class WalletScreen extends StatelessWidget {
 
   Widget _buildAppBarRow() {
     return Row(
-        children: [
+        children: const[
       Icon(Icons.arrow_back_ios_rounded),
       SizedBox(width: 113,),
-      const Text(
+      Text(
         "Wallet",
         style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
       ),
@@ -56,7 +57,7 @@ class WalletScreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
               color: Colors.red.shade200),
         ),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
         Text(
@@ -66,12 +67,12 @@ class WalletScreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
               color: Colors.red.shade200),
         ),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
         Container(
-          height: 35,
-          width: 104,
+          height: 35.h,
+          width: 104.w,
           decoration: BoxDecoration(
               color: Colors.red.shade200,
               borderRadius: BorderRadius.circular(20)),
@@ -102,15 +103,15 @@ class WalletScreen extends StatelessWidget {
 
   Widget _buildWinningsContainers() {
     return Container(
-        height: 132,
-        padding: const EdgeInsets.only(left: 20, right: 20),
+        height: 132.h,
+        padding: EdgeInsets.only(left: 20.w, right: 20.w),
         width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Colors.amber.shade600),
             color: Colors.white),
         child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 23,
           ),
           Row(
@@ -119,29 +120,29 @@ class WalletScreen extends StatelessWidget {
                 Icons.stars_rounded,
                 color: Colors.amber.shade600,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 27,
               ),
-              Expanded(
+              const Expanded(
                 child: Text(
                   "Winnings",
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                 ),
               ),
-              Image(
+              const Image(
                   image: AssetImage(
                       "assets/images/wallet_screen_winning_container_icon.png")),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Divider(
-            height: 5,
+            height: 5.h,
             thickness: 1,
             color: Colors.grey.shade200,
           ),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
           Row(
@@ -192,15 +193,15 @@ class WalletScreen extends StatelessWidget {
 
   Widget _buildBonusPointContainers() {
     return Container(
-        height: 132,
-        padding: const EdgeInsets.only(left: 20, right: 20),
+        height: 132.h,
+        padding: EdgeInsets.only(left: 20.w, right: 20.w),
         width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Colors.green),
             color: Colors.white),
         child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 23,
           ),
           Row(
@@ -209,29 +210,29 @@ class WalletScreen extends StatelessWidget {
                 Icons.stars_rounded,
                 color: Colors.green[700],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 27,
               ),
-              Expanded(
+              const Expanded(
                 child: Text(
                   "Bonus Point",
                   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                 ),
               ),
-              Image(
+              const Image(
                   image: AssetImage(
                       "assets/images/wallet_screen_winning_container_icon.png")),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Divider(
-            height: 5,
+            height: 5.h,
             thickness: 1,
             color: Colors.grey.shade200,
           ),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
           Row(
@@ -289,8 +290,8 @@ class WalletScreen extends StatelessWidget {
               Icons.swap_vertical_circle_sharp,
               color: Colors.deepPurple[400],
             ),
-            SizedBox(width: 16,),
-            Expanded(
+            const SizedBox(width: 16,),
+            const Expanded(
               child: Text(
                 "Transaction History",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
@@ -299,19 +300,19 @@ class WalletScreen extends StatelessWidget {
             Icon(Icons.arrow_forward_ios_sharp,size: 15,)
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Divider(
-          height: 5,
+          height: 5.h,
           thickness: 1,
           color: Colors.grey.shade200,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(
-          children: [
+          children: const [
             Icon(
               Icons.download_for_offline,
               color: Colors.purple,
@@ -326,7 +327,7 @@ class WalletScreen extends StatelessWidget {
             Icon(Icons.arrow_forward_ios_sharp,size: 15,)
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Divider(
@@ -334,7 +335,7 @@ class WalletScreen extends StatelessWidget {
           thickness: 1,
           color: Colors.grey.shade200,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(
@@ -343,17 +344,17 @@ class WalletScreen extends StatelessWidget {
               Icons.wallet,
               color: Colors.yellow[800],
             ),
-            SizedBox(width: 16,),
-            Expanded(
+            const SizedBox(width: 16,),
+            const Expanded(
               child: Text(
                 "KYC Details",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
               ),
             ),
-            Icon(Icons.arrow_forward_ios_sharp,size: 15,)
+            const Icon(Icons.arrow_forward_ios_sharp,size: 15,)
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Divider(
@@ -362,11 +363,11 @@ class WalletScreen extends StatelessWidget {
           color: Colors.grey.shade200,
 
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(
-          children: [
+          children: const [
             Icon(
               Icons.file_open,
               color: Colors.green,
@@ -382,7 +383,7 @@ class WalletScreen extends StatelessWidget {
           ],
         ),
 
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
 
