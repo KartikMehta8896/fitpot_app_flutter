@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
@@ -13,15 +14,15 @@ class _StateVerificationCodeScreen extends State<VerificationCodeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 26, vertical: 50),
+        margin: EdgeInsets.symmetric(horizontal: 26.w, vertical: 50.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 68,
             ),
-            Icon(Icons.arrow_back_ios_rounded),
+            const Icon(Icons.arrow_back_ios_rounded),
             const SizedBox(
               height: 30,
             ),
@@ -50,8 +51,8 @@ class _StateVerificationCodeScreen extends State<VerificationCodeScreen> {
               length: 4,
               showCursor: true,
               defaultPinTheme: PinTheme(
-                  width: 60,
-                  height: 60,
+                  width: 60.w,
+                  height: 60.h,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.red.shade200)),
@@ -64,10 +65,10 @@ class _StateVerificationCodeScreen extends State<VerificationCodeScreen> {
               height: 40,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 40),
+              padding: EdgeInsets.only(left: 40.w),
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     "I don’t receive a code!",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   ),

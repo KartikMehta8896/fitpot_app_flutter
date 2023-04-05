@@ -1,5 +1,6 @@
 import 'package:fitpot_app_flutter/body_measurement_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CreateAnAccountScreen extends StatefulWidget {
   const CreateAnAccountScreen({Key? key}) : super(key: key);
@@ -124,8 +125,8 @@ class _CreateAnAccountScreenState extends State<CreateAnAccountScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: 75,
-                width: 52.56,
+                height: 75.h,
+                width: 52.56.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.white),
@@ -137,8 +138,8 @@ class _CreateAnAccountScreenState extends State<CreateAnAccountScreen> {
                 width: 36,
               ),
               Container(
-                height: 75,
-                width: 50.56,
+                height: 75.h,
+                width: 50.56.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.white),
@@ -151,8 +152,8 @@ class _CreateAnAccountScreenState extends State<CreateAnAccountScreen> {
                 width: 36,
               ),
               Container(
-                height: 75,
-                width: 50.56,
+                height: 75.h,
+                width: 50.56.w,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.white),
@@ -201,9 +202,9 @@ class _CreateAnAccountScreenState extends State<CreateAnAccountScreen> {
             ));
       },
       child: Padding(
-        padding: const EdgeInsets.only(left: 66, right: 67),
+        padding:EdgeInsets.only(left: 66.w, right: 67.w),
         child: Container(
-          height: 40,
+          height: 40.h,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),

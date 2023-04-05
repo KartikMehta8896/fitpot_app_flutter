@@ -1,5 +1,6 @@
 import 'package:fitpot_app_flutter/full_body_workout_page_/full_body_workout_page_a_discription.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FullBodyWorkoutPage extends StatelessWidget {
   const FullBodyWorkoutPage({Key? key}) : super(key: key);
@@ -41,18 +42,18 @@ class FullBodyWorkoutPage extends StatelessWidget {
               image:
                   AssetImage("assets/images/fullbody_workout_page_image.jpg")),
           Positioned(
-            top: 180,
-            left: 26,
-            right: 26,
+            top: 180.h,
+            left: 26.w,
+            right: 26.w,
             child: Container(
               // margin: EdgeInsets.only(left: 20, right: 20),
-              height: 140,
+              height: 140.h,
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.red.shade200),
               child: Padding(
-                padding: const EdgeInsets.only(left: 28),
+                padding:  EdgeInsets.only(left: 28.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
@@ -86,13 +87,13 @@ class FullBodyWorkoutPage extends StatelessWidget {
 
   Widget _buildStartAndEndDateContainer() {
     return Container(
-      margin: EdgeInsets.only(left: 26, right: 27),
-      height: 92,
+      margin: EdgeInsets.only(left: 26.w, right: 27.w),
+      height: 92.h,
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20), color: Colors.white),
       child: Padding(
-        padding: const EdgeInsets.only(left: 27, right: 26),
+        padding: EdgeInsets.only(left: 27.w, right: 26.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -133,13 +134,13 @@ class FullBodyWorkoutPage extends StatelessWidget {
 
   Widget _buildADescriptionsContainer() {
     return Container(
-      height: 62,
+      height: 62.h,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 26, right: 27),
+      margin: EdgeInsets.only(left: 26.w, right: 27.w),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15), color: Colors.white),
       child: Padding(
-        padding: const EdgeInsets.only(left: 29, right: 42),
+        padding: EdgeInsets.only(left: 29.w, right: 42.w),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -160,13 +161,13 @@ class FullBodyWorkoutPage extends StatelessWidget {
 
   Widget _buildBDescriptionsContainer() {
     return Container(
-      height: 62,
+      height: 62.h,
       width: double.infinity,
-      margin: EdgeInsets.only(left: 26, right: 27),
+      margin: EdgeInsets.only(left: 26.w, right: 27.w),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15), color: Colors.white),
       child: Padding(
-        padding: const EdgeInsets.only(left: 29, right: 42),
+        padding: EdgeInsets.only(left: 29.w, right: 42.w),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
@@ -195,9 +196,9 @@ class FullBodyWorkoutPage extends StatelessWidget {
             ));
       },
       child: Padding(
-        padding: EdgeInsets.only(left: 66, right: 67),
+        padding: EdgeInsets.only(left: 66.w, right: 67.w),
         child: Container(
-          height: 40,
+          height: 40.w,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: Colors.red[200]),

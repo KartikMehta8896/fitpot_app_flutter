@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class WorkoutCardItem extends StatelessWidget {
   String title;
@@ -19,25 +21,25 @@ class WorkoutCardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 35, right: 23),
+      padding:  EdgeInsets.only(left: 35.w, right: 23.w),
       child: Container(
-        height: 137,
+        height: 137.h,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Colors.pink[50]),
         child: Row(
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 21),
+              padding: EdgeInsets.only(left: 21.w),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 13,
+                    height: 13.h,
                   ),
                   Container(
-                    height: 17,
-                    width: 51,
+                    height: 17.h,
+                    width: 51.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.pink[100]),
@@ -52,7 +54,7 @@ class WorkoutCardItem extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                   SizedBox(
                     height: 9,
                   ),
                   Text(
@@ -73,8 +75,8 @@ class WorkoutCardItem extends StatelessWidget {
                     height: 21,
                   ),
                   Container(
-                      height: 22,
-                      width: 80,
+                      height: 22.h,
+                      width: 80.w,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),

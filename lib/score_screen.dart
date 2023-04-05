@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ScoreScreen extends StatelessWidget {
   const ScoreScreen({Key? key}) : super(key: key);
@@ -9,15 +10,15 @@ class ScoreScreen extends StatelessWidget {
       body: Column(
         children: [
           _buildAppBarContainer(),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           _buildNameAndRankRow(),
-          SizedBox(
+          const SizedBox(
             height: 11,
           ),
           _buildStraightLine(),
-          SizedBox(
+          const SizedBox(
             height: 23,
           ),
           _buildNameAndRankColumn(),
@@ -28,24 +29,24 @@ class ScoreScreen extends StatelessWidget {
 
   Widget _buildAppBarContainer() {
     return Container(
-      height: 240,
+      height: 240.h,
       decoration: BoxDecoration(
           color: Colors.red.shade200, borderRadius: BorderRadius.circular(20)),
       child: Column(
         children: [
           SizedBox(
-            height: 34,
+            height: 34.h,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 32),
+            padding: EdgeInsets.only(left: 32.w),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(
+                const Icon(
                   Icons.arrow_back_ios_rounded,
                   color: Colors.white,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 80,
                 ),
                 CircleAvatar(
@@ -61,7 +62,7 @@ class ScoreScreen extends StatelessWidget {
                             fontSize: 13,
                             color: Colors.red.shade200),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 7,
                       ),
                       Text(
@@ -77,11 +78,11 @@ class ScoreScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 42, right: 36),
+            padding:EdgeInsets.only(left: 42.w, right: 36.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -109,7 +110,7 @@ class ScoreScreen extends StatelessWidget {
 
   Widget _buildNameAndRankRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 83, right: 65),
+      padding: EdgeInsets.only(left: 83.w, right: 65.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children:const [
@@ -133,10 +134,10 @@ class ScoreScreen extends StatelessWidget {
   }
 
   Widget _buildStraightLine() {
-    return const Padding(
-      padding: EdgeInsets.only(left: 11, right: 18),
+    return Padding(
+      padding: EdgeInsets.only(left: 11.w, right: 18.w),
       child: Divider(
-        height: 5,
+        height: 5.h,
         thickness: 1,
         color: Colors.black54,
       ),
@@ -145,7 +146,7 @@ class ScoreScreen extends StatelessWidget {
 
   Widget _buildNameAndRankColumn() {
     return Padding(
-      padding: const EdgeInsets.only(left: 35,right: 65),
+      padding:EdgeInsets.only(left: 35.w,right: 65.w),
       child: Column(
         children: [
           Row(children: const[
@@ -161,7 +162,7 @@ class ScoreScreen extends StatelessWidget {
             "#1",
             style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14,color: Colors.black54),
           )]),
-          SizedBox(height: 19,),
+          const SizedBox(height: 19,),
           Row(children: const[
             Icon(Icons.account_circle),
             SizedBox(width: 9,),
@@ -175,7 +176,7 @@ class ScoreScreen extends StatelessWidget {
               "#2",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14,color: Colors.black54),
             )]),
-          SizedBox(height: 19,),
+          const SizedBox(height: 19,),
           Row(children: const[
             Icon(Icons.account_circle),
             SizedBox(width: 9,),
@@ -189,7 +190,7 @@ class ScoreScreen extends StatelessWidget {
               "#3",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14,color: Colors.black54),
             )]),
-          SizedBox(height: 19,),
+          const SizedBox(height: 19,),
           Row(children: const[
             Icon(Icons.account_circle),
             SizedBox(width: 9,),
@@ -203,7 +204,7 @@ class ScoreScreen extends StatelessWidget {
               "#4",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14,color: Colors.black54),
             )]),
-          SizedBox(height: 19,),
+          const SizedBox(height: 19,),
           Row(children: const[
             Icon(Icons.account_circle),
             SizedBox(width: 9,),
@@ -217,7 +218,7 @@ class ScoreScreen extends StatelessWidget {
               "#5",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14,color: Colors.black54),
             )]),
-          SizedBox(height: 19,),
+          const SizedBox(height: 19,),
           Row(children: const[
             Icon(Icons.account_circle),
             SizedBox(width: 9,),
@@ -231,7 +232,7 @@ class ScoreScreen extends StatelessWidget {
               "#6",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14,color: Colors.black54),
             )]),
-          SizedBox(height: 19,),
+          const SizedBox(height: 19,),
           Row(children: const[
             Icon(Icons.account_circle),
             SizedBox(width: 9,),

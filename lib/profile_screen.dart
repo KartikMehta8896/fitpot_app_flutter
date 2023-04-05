@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -17,31 +18,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 44,
             ),
             _buildTopRow(),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             _buildImageNameEditRow(),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             _buildHeightWeightAgeColumn(),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             _buildAccountContainer(),
-            SizedBox(
+            const SizedBox(
               height: 18,
             ),
             _buildNotificationContainer(),
-            SizedBox(
+            const SizedBox(
               height: 18,
             ),
             _buildOtherContainer(),
-            SizedBox(
+            const SizedBox(
               height: 93,
             )
           ],
@@ -52,21 +53,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildTopRow() {
     return Row(
-      children: const [
-        SizedBox(
+      children:  [
+        const SizedBox(
           height: 40,
         ),
         Padding(
-          padding: EdgeInsets.only(left: 30),
-          child: Icon(
+          padding: EdgeInsets.only(left: 30.w),
+          child: const Icon(
             Icons.arrow_back_ios_rounded,
             size: 15,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 130,
         ),
-        Text(
+        const Text(
           "Profile",
           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
         )
@@ -76,25 +77,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildImageNameEditRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30),
+      padding: EdgeInsets.only(left: 30.w, right: 30.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
+          const Icon(
             Icons.account_circle,
             size: 50,
           ),
-          Text(
+          const Text(
             "StefaniWong",
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
           ),
           Container(
-            height: 30,
-            width: 88,
+            height: 30.h,
+            width: 88.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.red.shade200),
-            child: Center(
+            child: const Center(
                 child: Text(
               "Edit",
               style: TextStyle(
@@ -112,7 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 54, right: 61),
+          padding: EdgeInsets.only(left: 54.w, right: 61.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -140,11 +141,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 54, right: 61),
+          padding: EdgeInsets.only(left: 54.w, right: 61.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
@@ -178,35 +179,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildAccountContainer() {
     return Container(
-      margin: EdgeInsets.only(left: 40, right: 30),
+      margin: EdgeInsets.only(left: 40.w, right: 30.w),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(1), color: Colors.white),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding:EdgeInsets.all(8.sm),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text(
+              padding: EdgeInsets.only(left: 20.w),
+              child: const Text(
                 "Account",
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
               ),
             ),
-            SizedBox(height: 18),
+            const SizedBox(height: 18),
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.all(8.sm),
                   child: Icon(
                     Icons.account_circle,
                     color: Colors.red.shade200,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Text(
                     "Personal Data",
                     style: TextStyle(
@@ -215,19 +216,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         color: Colors.black54),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right)
+                const Icon(Icons.keyboard_arrow_right)
               ],
             ),
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.all(8.sm),
                   child: Icon(
                     Icons.document_scanner_outlined,
                     color: Colors.red.shade200,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Text(
                     "Achievement",
                     style: TextStyle(
@@ -236,19 +237,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         color: Colors.black54),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right)
+                const Icon(Icons.keyboard_arrow_right)
               ],
             ),
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.all(8.sm),
                   child: Icon(
                     Icons.graphic_eq,
                     color: Colors.red.shade200,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Text(
                     "Activity History",
                     style: TextStyle(
@@ -257,19 +258,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         color: Colors.black54),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right)
+                const Icon(Icons.keyboard_arrow_right)
               ],
             ),
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding:  EdgeInsets.all(8.sm),
                   child: Icon(
                     Icons.add_chart,
                     color: Colors.red.shade200,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Text(
                     "Workout Progress",
                     style: TextStyle(
@@ -278,10 +279,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         color: Colors.black54),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right)
+                const Icon(Icons.keyboard_arrow_right)
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 21,
             )
           ],
@@ -292,33 +293,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildNotificationContainer() {
     return Container(
-      margin: EdgeInsets.only(left: 40, right: 30),
+      margin: EdgeInsets.only(left: 40.w, right: 30.w),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(1), color: Colors.white),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Text(
+          padding:EdgeInsets.only(left: 20.w),
+          child: const Text(
             "Notification",
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 16,
         ),
         Row(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.sm),
               child: Icon(
                 Icons.notifications,
                 color: Colors.red.shade200,
               ),
             ),
-            Expanded(
+            const Expanded(
               child: Text(
                 "Pop-up Notification",
                 style: TextStyle(
@@ -348,22 +349,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildOtherContainer() {
     return Container(
-        margin: EdgeInsets.only(left: 40, right: 30),
+        margin: EdgeInsets.only(left: 40.w, right: 30.w),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(1), color: Colors.white),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.only(left: 25, top: 20),
-            child: Text(
+            padding: EdgeInsets.only(left: 25.w, top: 20.w),
+            child: const Text(
               "Other",
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 21),
+            padding: EdgeInsets.only(left: 21.w),
             child: Row(
               children: [
                 Icon(
@@ -372,8 +373,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
+                    padding:  EdgeInsets.all(8.sm),
+                    child: const Text(
                       "Contact Us",
                       style: TextStyle(
                           fontSize: 12,
@@ -382,13 +383,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right)
+                const Icon(Icons.keyboard_arrow_right)
               ],
             ),
           ),
           SizedBox(height: 10,),
           Padding(
-            padding: const EdgeInsets.only(left: 21),
+            padding: EdgeInsets.only(left: 21.w),
             child: Row(
               children: [
                 Icon(
@@ -397,8 +398,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
+                    padding: EdgeInsets.all(8.sm),
+                    child: const Text(
                       "Privacy Policy",
                       style: TextStyle(
                           fontSize: 12,
@@ -407,13 +408,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right)
+                const Icon(Icons.keyboard_arrow_right)
               ],
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Padding(
-            padding: const EdgeInsets.only(left: 21),
+            padding: EdgeInsets.only(left: 21.w),
             child: Row(
               children: [
                 Icon(
@@ -422,8 +423,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
+                    padding:  EdgeInsets.all(8.sm),
+                    child: const Text(
                       "Setting",
                       style: TextStyle(
                           fontSize: 12,
@@ -432,12 +433,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_right),
+                const Icon(Icons.keyboard_arrow_right),
               ],
 
             ),
           ),
-          SizedBox(height: 20,)
+          const SizedBox(height: 20,)
         ]));
   }
 }

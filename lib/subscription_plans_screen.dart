@@ -1,5 +1,6 @@
 import 'package:fitpot_app_flutter/wallet_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SubscriptionPlansScreen extends StatelessWidget {
   const SubscriptionPlansScreen({Key? key}) : super(key: key);
@@ -9,29 +10,30 @@ class SubscriptionPlansScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(left: 32),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 45,
             ),
             _buildAppBarRow(),
-            SizedBox(
+            const SizedBox(
               height: 62,
             ),
             _buildSubscriptionType(),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             _buildContainerSliverGoldDiamond(),
-            SizedBox(
+            const SizedBox(
               height: 55,
             ),
             buildDollarPerMonth(),
-            SizedBox(
+            const SizedBox(
               height: 45,
             ),
             _buildPlanDescription(),
-            SizedBox(
+            const SizedBox(
               height: 88,
             ),
             _buildChooseButton(context),
@@ -43,7 +45,7 @@ class SubscriptionPlansScreen extends StatelessWidget {
 
   Widget _buildAppBarRow() {
     return Padding(
-      padding: const EdgeInsets.only(left: 43),
+      padding: EdgeInsets.only(left: 43.w),
       child: Row(
         children: const [
           Icon(Icons.arrow_back_ios_rounded),
@@ -63,7 +65,7 @@ class SubscriptionPlansScreen extends StatelessWidget {
   Widget _buildSubscriptionType() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const[
+      children: const [
         Text(
           "Subscription Type",
           style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
@@ -82,8 +84,8 @@ class SubscriptionPlansScreen extends StatelessWidget {
     return Row(
       children: [
         Container(
-          height: 54,
-          width: 92,
+          height: 54.h,
+          width: 92.w,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(10)),
           child: const Center(
@@ -94,12 +96,12 @@ class SubscriptionPlansScreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 18,
         ),
         Container(
-          height: 54,
-          width: 92,
+          height: 54.h,
+          width: 92.w,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(10)),
           child: const Center(
@@ -110,12 +112,12 @@ class SubscriptionPlansScreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 18,
         ),
         Container(
-          height: 54,
-          width: 92,
+          height: 54.h,
+          width: 92.w,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(10)),
           child: const Center(
@@ -141,7 +143,7 @@ class SubscriptionPlansScreen extends StatelessWidget {
               fontWeight: FontWeight.w900,
               color: Colors.red.shade200),
         ),
-        Text(
+        const Text(
           "/month",
           style: TextStyle(color: Colors.black54, fontSize: 20),
         )
@@ -150,30 +152,33 @@ class SubscriptionPlansScreen extends StatelessWidget {
   }
 
   Widget _buildPlanDescription() {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children:[
-      Text(
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const Text(
         "Plan Description",
         style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
       ),
-      SizedBox(
+      const SizedBox(
         height: 8,
       ),
-      const Padding(
-        padding: EdgeInsets.only( right: 87),
-        child: Text(
+      Padding(
+        padding: EdgeInsets.only(right: 87.w),
+        child: const Text(
           "For most businesses that want to optimize web queries",
           style: TextStyle(
               fontWeight: FontWeight.w500, fontSize: 15, color: Colors.black54),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 13,
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 27),
+        padding: EdgeInsets.only(left: 27.w),
         child: Row(
           children: const [
-            Icon(Icons.done),SizedBox(width: 15,),
+            Icon(Icons.done),
+            SizedBox(
+              width: 15,
+            ),
             Text(
               "All limited links",
               style: TextStyle(
@@ -184,14 +189,17 @@ class SubscriptionPlansScreen extends StatelessWidget {
           ],
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 8,
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 27),
+        padding: EdgeInsets.only(left: 27.w),
         child: Row(
           children: const [
-            Icon(Icons.done),SizedBox(width: 15,),
+            Icon(Icons.done),
+            SizedBox(
+              width: 15,
+            ),
             Text(
               "Own analytics platform",
               style: TextStyle(
@@ -202,14 +210,17 @@ class SubscriptionPlansScreen extends StatelessWidget {
           ],
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 8,
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 27),
+        padding: EdgeInsets.only(left: 27.w),
         child: Row(
           children: const [
-            Icon(Icons.done),SizedBox(width: 15,),
+            Icon(Icons.done),
+            SizedBox(
+              width: 15,
+            ),
             Text(
               "Chat support",
               style: TextStyle(
@@ -220,14 +231,17 @@ class SubscriptionPlansScreen extends StatelessWidget {
           ],
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 8,
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 27),
+        padding: EdgeInsets.only(left: 27.w),
         child: Row(
           children: const [
-            Icon(Icons.done),SizedBox(width: 15,),
+            Icon(Icons.done),
+            SizedBox(
+              width: 15,
+            ),
             Text(
               "Optimize hashtags",
               style: TextStyle(
@@ -238,14 +252,17 @@ class SubscriptionPlansScreen extends StatelessWidget {
           ],
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 8,
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 27),
+        padding: EdgeInsets.only(left: 27.w),
         child: Row(
           children: const [
-            Icon(Icons.done),SizedBox(width: 15,),
+            Icon(Icons.done),
+            SizedBox(
+              width: 15,
+            ),
             Text(
               "Unlimited users",
               style: TextStyle(
@@ -265,10 +282,12 @@ class SubscriptionPlansScreen extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const WalletScreen(),));
+              builder: (context) => const WalletScreen(),
+            ));
       },
-      child: Container(margin:  EdgeInsets.only(left: 50, right: 78),
-        height: 40,
+      child: Container(
+        margin: EdgeInsets.only(left: 50.w, right: 78.w),
+        height: 40.h,
         width: double.infinity,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20), color: Colors.red[200]),

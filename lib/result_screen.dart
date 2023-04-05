@@ -1,5 +1,6 @@
 import 'package:fitpot_app_flutter/quiz_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class ResultScreen extends StatefulWidget {
@@ -16,22 +17,22 @@ class _ResultScreenState extends State<ResultScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 58,),
+            const SizedBox(height: 58,),
             _buildAppBarText(),
-            SizedBox(
+            const SizedBox(
               height: 71,
             ),
             _buildResultText(),
-            SizedBox(
+            const SizedBox(
               height: 56,
             ),
             _buildSpeedoMeter(),
             _buildYouHaveNormalBodyWeight(),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             _buildGoodJobTextRow(),
-            SizedBox(
+            const SizedBox(
               height: 150,
             ),
             _buildBottomButton(),
@@ -43,7 +44,7 @@ class _ResultScreenState extends State<ResultScreen> {
 
   Widget _buildAppBarText() {
     return Row(
-      children: [
+      children:const [
         Icon(Icons.arrow_back_ios_rounded),
         SizedBox(
           width: 23,
@@ -57,7 +58,7 @@ class _ResultScreenState extends State<ResultScreen> {
   }
 
   Widget _buildResultText() {
-    return Center(
+    return const Center(
       child: Text(
         "Result",
         style: TextStyle(fontSize: 31, fontWeight: FontWeight.w700),
@@ -89,7 +90,7 @@ class _ResultScreenState extends State<ResultScreen> {
               color: Colors.red.shade500,
             )
           ],
-          pointers: [
+          pointers: const [
             NeedlePointer(
               value: 110,
               enableAnimation: true,
@@ -111,7 +112,7 @@ class _ResultScreenState extends State<ResultScreen> {
   }
 
   Widget _buildYouHaveNormalBodyWeight() {
-    return Center(
+    return const Center(
       child: Text(
         "You have normal body weight",
         style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
@@ -137,12 +138,12 @@ class _ResultScreenState extends State<ResultScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>  QuizScreen(),));
+            builder: (context) =>  const QuizScreen(),));
       },
       child: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30,bottom: 47),
         child: Container(
-          height: 45,
+          height: 45.h,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20), color: Colors.red[200]),
